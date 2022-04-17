@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
+.allPage {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .fixed {
+    display: flex;
+
+    width: 50%;
+    height: 100%;
+  }
+  .infoBox {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: flex-start;
+    background: #dadada;
+    width: 50%;
+    height: 100%;
+    &[theme="dark"] {
+      background: #8c8c8c;
+    }
+
+    .logo {
+      margin-left: 4%;
+      margin-top: 5%;
+    }
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2%;
+    }
+
+    .heading {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-left: 4%;
+      margin-top: 3%;
+      margin-right: 45px;
+      font-family: "Oxygen";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 41px;
+      line-height: 74px;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      color: #444aff;
+    }
+    .description {
+      display: flex;
+      font-family: "Oxygen";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 35px;
+      margin-left: 40px;
+      margin-right: 40px;
+
+      color: #444aff;
+    }
+
+    .rectangle {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .minRect {
+        width: 275px;
+        margin-top: 30px;
+      }
+      .maxRect {
+        width: 400px;
+        margin-top: -10px;
+        margin-right: 50px;
+      }
+    }
+  }
+  .formBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+
+    &[theme="dark"] {
+      background: #2c2c2c;
+    }
+    .moonIcon {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      top: 2%;
+      right: 1.7%;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      padding-top: 4%;
+
+      .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 6px;
+        margin-bottom: 50px;
+
+        strong {
+          font-weight: 700;
+          font-size: 47px;
+          line-height: 59px;
+          color: #000;
+          padding-right: 36px;
+          position: relative;
+
+          &[theme="dark"] {
+            color: #fefefe;
+          }
+          &[theme="light"]::before {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 155px;
+            background-color: blue;
+            left: 0;
+            bottom: -16px;
+          }
+          &[theme="dark"]::before {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 155px;
+            background-color: #ffbf5e;
+            left: 0;
+            bottom: -16px;
+          }
+        }
+
+        span {
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 35px;
+          padding-bottom: 3px;
+          cursor: pointer;
+        }
+      }
+      .formDoubleGroup {
+        display: flex;
+
+        .formGroup {
+          width: 100%;
+
+          &:first-child {
+            margin-right: 32px;
+          }
+        }
+      }
+
+      .formGroup {
+        display: flex;
+        flex-direction: column;
+
+        b {
+          cursor: pointer;
+        }
+
+        label.title {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 25px;
+          letter-spacing: 0.15px;
+          color: #3c3c3c;
+          margin-bottom: 12px;
+          margin-top: 20px;
+
+          &[theme="dark"] {
+            color: #fefefe;
+          }
+        }
+
+        label.required {
+          &::after {
+            content: "*";
+            color: red;
+            padding-left: 2px;
+          }
+        }
+
+        textarea,
+        input[type="text"],
+        input[type="password"] {
+          border: 2px solid #aaa;
+          height: 56px;
+          background-color: transparent;
+          border-radius: 4px;
+          padding: 0 22px;
+          font-size: 16px;
+          line-height: 20.2px;
+          letter-spacing: 0.15px;
+          color: #000;
+          outline: none;
+          width: 500px;
+
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+
+        textarea {
+          padding: 22px;
+          min-height: 150px;
+        }
+
+        span {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.4px;
+          height: 16px;
+          padding-left: 22px;
+          padding-top: 5px;
+        }
+
+        strong {
+          width: 100%;
+          text-align: center;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: 0.1px;
+        }
+
+        &.formButton {
+          margin-top: 25px;
+
+          button {
+            width: 100%;
+            height: 56px;
+            border: 0;
+            border-radius: 4px;
+          }
+        }
+
+        &.formButton2 {
+          margin-top: 25px;
+
+          button {
+            width: 100%;
+            height: 56px;
+            background-color: green;
+            color: #000;
+            border: 0;
+            border-radius: 4px;
+          }
+        }
+
+        &.formText {
+          text-align: center;
+          color: #0ff;
+        }
+
+        &.formError {
+          span,
+          label {
+            color: red;
+          }
+
+          textarea,
+          input[type="text"],
+          input[type="password"] {
+            border-color: red;
+            color: red;
+
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+        }
+      }
+      .formGroup2 {
+        display: flex;
+        flex-direction: column;
+
+        .checkContainer{
+          margin-top: 5%;
+          display: flex;
+          flex-direction: row;
+
+        }
+
+        b {
+          cursor: pointer;
+        }
+
+        label.title {
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 25px;
+          letter-spacing: 0.15px;
+          color: #3c3c3c;
+          margin-top: -5px;
+          margin-left: 3%;
+
+          &[theme="dark"] {
+            color: #fefefe;
+          }
+        }
+
+        label.required {
+          &::after {
+            content: "*";
+            color: red;
+            padding-left: 2px;
+          }
+        }
+
+        input[type="checkbox"] {
+          transform: scale(1.6);
+          
+        }
+        span {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.4px;
+          height: 16px;
+          padding-left: 5px;
+          margin-top: -3%;
+          
+        }
+
+        &.formButton {
+          margin-top: 25px;
+
+          button {
+            width: 100%;
+            height: 56px;
+            border: 0;
+            border-radius: 4px;
+          }
+        }
+
+        &.formButton2 {
+          margin-top: 25px;
+
+          button {
+            width: 100%;
+            height: 56px;
+            background-color: green;
+            color: #000;
+            border: 0;
+            border-radius: 4px;
+          }
+        }
+
+        &.formText {
+          text-align: center;
+          color: #0ff;
+        }
+
+        &.formError {
+          span,
+          label {
+            color: red;
+          }
+
+          textarea,
+          input[type="text"],
+          input[type="password"] {
+            border-color: red;
+            color: red;
+
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+        }
+      }
+
+      .errorType {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+        height: 16px;
+        padding-left: 22px;
+        padding-top: 5px;
+        font-style: normal;
+        color: red;
+      }
+
+      .formErrorText {
+        color: red;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+        height: 16px;
+      }
+
+      .registerButton {
+        background-color: blue;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+        &[theme="dark"] {
+          background: #ffbf5e;
+        }
+        &:disabled {
+          opacity: 0.6;
+        }
+      }
+
+      .whoAmI {
+        display: flex;
+        width: 550px;
+        flex-direction: row;
+        justify-content: space-between;
+
+        textarea,
+        input[type="text"],
+        input[type="password"] {
+          border: 2px solid #aaa;
+          height: 56px;
+          background-color: transparent;
+          border-radius: 4px;
+          padding: 0 22px;
+          font-size: 16px;
+          line-height: 20.2px;
+          letter-spacing: 0.15px;
+          color: #000;
+          outline: none;
+          width: 200px;
+
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+      }
+      .entries {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .error {
+    color: #ee6356;
+  }
+  .wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .drop {
+    width: 200px;
+    height: 50px;
+    color: #fff;
+  }
+
+  .drop span {
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .drop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .drop li {
+    list-style: none;
+    padding: 10px;
+    margin: 2px 0;
+    background-color: gray;
+    cursor: pointer;
+  }
+
+  .inputContainer input {
+    display: flex;
+    height: 50px;
+    width: 300px;
+    border: 1px solid #ddd;
+  }
+  .inputContainer span {
+    display: flex;
+    height: 50px;
+    width: 300px;
+  }
+}
